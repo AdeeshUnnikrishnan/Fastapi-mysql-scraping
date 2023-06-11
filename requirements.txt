@@ -1,0 +1,10 @@
+selenium
+requests
+sqlalchemy
+mysql.connector
+pydantic
+pymysql
+uvicorn
+webdriver_manager
+pandas
+fastapi
