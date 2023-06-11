@@ -82,5 +82,5 @@ This application requires the following packages:
 To install the packages, run the following command:
 
 ```bash
-pip install selenium requests sqlalchemy mysql-connector-python pydantic pymysql uvicorn webdriver_manager pandas fastapi bash```
+pip install selenium requests sqlalchemy mysql-connector-python pydantic pymysql uvicorn webdriver_manager pandas fastapi 
 
