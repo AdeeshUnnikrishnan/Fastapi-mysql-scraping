@@ -62,6 +62,7 @@ This application provides the following endpoints:
     Ensure that the required packages are installed as mentioned in the "Package Details and Installation Instructions" section.
 
     Optionally, you can run the main.py (to run without docker) file located in the parent directory using the following command:
+    * create a venv to activate virtual environment, python -m venv venv
     * python main.py
 
 ## Package Details and Installation Instructions
