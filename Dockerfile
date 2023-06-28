@@ -11,6 +11,7 @@ RUN apt-get update \
         gcc \
         default-libmysqlclient-dev \
         python3-dev \
+        chromium-driver \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -23,5 +24,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code
 COPY . .
 
+EXPOSE 8081
+
 # Set the entrypoint command
-CMD ["python", "main.py"]
+CMD ["uvicorn", "app.api.endpoints:app", "--host=0.0.0.0", "--port=8081"]
