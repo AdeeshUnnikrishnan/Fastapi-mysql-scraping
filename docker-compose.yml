@@ -7,7 +7,7 @@ services:
       MYSQL_DATABASE: bse
       MYSQL_ROOT_PASSWORD: Qwertyuiop7502755701
     ports:
-      - '3307:3306'
+      - "3307:3306"
     volumes:
       - mysql-data:/var/lib/mysql
 
@@ -17,12 +17,12 @@ services:
       dockerfile: Dockerfile
     #command: uvicorn app.api.endpoints:app --reload --host 127.0.0.1 --port 8000
     ports:
-      - 8111:8111
+      - 8081:8081
     depends_on:
       - db
     environment:
       - DB_HOST=localhost
-      - DB_PORT=3307
+      - DB_PORT=3306
       - DB_USER=root
       - DB_PASSWORD=Qwertyuiop7502755701
       - DB_DATABASE=bse
