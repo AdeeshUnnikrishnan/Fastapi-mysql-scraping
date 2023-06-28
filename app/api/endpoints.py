@@ -20,11 +20,15 @@ async def create_user_endpoint(User_create:UserCreate, db: Session = Depends(get
     return {"message":"user added successfully",
     "User":new_user}
 
+@app.get("/get-all-users")
+async def get_all_user(db: Session = Depends(get_db)):
+    get_user = UserGet.get_all_users(db)
+    return {"User":get_user}
+
 @app.get("/get-user/{id}")
 async def get_user_endpoint(id, db: Session = Depends(get_db)):
     get_user = UserGet.get_user(id,db)
     return {"User":get_user}
-
 @app.delete("/delete-user/{id}")
 async def delete_user_endpoint(id, db: Session = Depends(get_db)):
     delete_user = UserDeletion.delete_user(id,db)
