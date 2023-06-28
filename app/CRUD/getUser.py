@@ -8,3 +8,7 @@ class UserGet:
     def get_user(user_id: int, db: Session = Depends(get_db)):
         user = db.query(User).filter(User.ID == user_id).first()
         return user
+
+    def get_all_users(db: Session = Depends(get_db)):
+        users = db.query(User).all()
+        return users
